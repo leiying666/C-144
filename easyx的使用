@@ -1,0 +1,32 @@
+initgraphy(x,y);
+x:窗口的横向距离（像素点）
+我的电脑2560*1600
+IMAGE 定义图片
+loadimage 加载图像
+putimage 显示图片  putimage(x,y,&image):在窗口x,y处把图片输出出来
+putimage(x,y,l,w,&image,xx,yy)
+x，y：窗口的坐标
+l，w：输出图片的长和宽
+xx,yy:图片中的坐标
+// 绘制图像(指定宽高和起始位置)
+void putimage(
+	int dstX,				// 绘制位置的 x 坐标
+	int dstY,				// 绘制位置的 y 坐标
+	int dstWidth,			// 绘制的宽度
+	int dstHeight,			// 绘制的高度
+	IMAGE *pSrcImg,			// 要绘制的 IMAGE 对象指针
+	int srcX,				// 绘制内容在 IMAGE 对象中的左上角 x 坐标
+	int srcY,				// 绘制内容在 IMAGE 对象中的左上角 y 坐标
+	DWORD dwRop = SRCCOPY	// 三元光栅操作码
+);
+
+setlinecolor 设置线条颜色
+setfillcolor 设置填充颜色
+settextcolor 设置文字颜色
+setbkcolor 设置背景颜色
+
+MOUSEMSG m
+int m
+m表示鼠标信息
+GetMouseMsg()
+获取鼠标信息，包括鼠标坐标，是否点击，以及其他信息
